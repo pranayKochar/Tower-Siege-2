@@ -8,6 +8,7 @@ var box1, pig1;
 var backgroundImg,platform;
 var bird, slingShot;
 var img;
+var canvasGround;
 
 function preload() {
     
@@ -20,6 +21,7 @@ function setup(){
 
 
     ground = new Ground(600,height,1200,20);
+    canvasGround = new Ground(600, height - 20, 1200, 20);
 
     base1= new Ground(550,400,250,5)
     base2= new Ground(900,200,200,5);
@@ -72,6 +74,7 @@ function draw(){
     Engine.update(engine);
     strokeWeight(4);
     ground.display();
+    canvasGround.display();
     hexagon.display();
     slingshot.display(); 
     base1.display();
